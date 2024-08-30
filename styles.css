@@ -16,7 +16,7 @@
   --link-color: #4da6ff; /* Brighter link color */
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 body {
