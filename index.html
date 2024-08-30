@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/feather-icons/dist/feather.min.css"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/portfolio.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Mohamed, a web developer." />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portfolio Webpage</title>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://invalid-portfolio.vercel.app/" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar" aria-label="Main Navigation">
+        <div>
+          <a href="#welcome-section" aria-label="About section">About</a>
+          <a href="#projects" aria-label="Work section">Work</a>
+          <a href="#contact" aria-label="Contact section">Contact</a>
+        </div>
+        <button id="theme-toggle">🌙 Theme</button>
+      </nav>
+    </header>
+    <main>
+      <section id="welcome-section" aria-labelledby="welcome-heading">
+        <h1 id="welcome-heading">Hello, I am Mohamed</h1>
+        <p>
+          I'm a web developer with experience in JavaScript, TypeScript,
+          frameworks like React and Next.js, Redux for state management, Node.js
+          for backend technology, Express.js, relational and non-relational
+          databases like MongoDB, and quality assurance tools like Jest and
+          Cypress.
+        </p>
+        <div id="laptop" role="img" aria-label="Laptop illustration">
+          <div id="screen">
+            <div id="screen-neck">
+              <div class="negative-border"></div>
+              <div class="neck-base"></div>
+            </div>
+          </div>
+          <div
+            id="keyboard"
+            role="img"
+            aria-label="Keyboard illustration"
+          ></div>
+          <div id="mouse" role="img" aria-label="Mouse illustration"></div>
+        </div>
+      </section>
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">These are some of my projects</h2>
+
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://youtube-displayer.vercel.app/"
+          class="project-tile"
+          aria-label="YouTube Studio project"
+        >
+          <p class="project-title">YouTube Studio</p>
+          <img
+            alt="YouTube Studio project"
+            src="assets/Youtube-Displayer.png"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://product-landing-page-moralist208.vercel.app/"
+          class="project-tile"
+          aria-label="Gotham Products project"
+        >
+          <p class="project-title">Gotham Products</p>
+          <img
+            alt="Gotham Products project"
+            src="assets/Gotham-Products.png"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://survey-form-moralist208.vercel.app/"
+          class="project-tile"
+          aria-label="Survey Form project"
+        >
+          <p class="project-title">Survey Form</p>
+          <img
+            alt="Survey Form project"
+            src="assets/Survey-Form.png"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://cryptonian-mu.vercel.app/"
+          class="project-tile"
+          aria-label="Cryptonian project"
+        >
+          <p class="project-title">Cryptonian</p>
+          <img
+            alt="Cryptonian project"
+            src="assets/Cryptonian.png"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://technical-documentation-page-moralist208.vercel.app/"
+          class="project-tile"
+          aria-label="Mathematics Overview project"
+        >
+          <p class="project-title">Mathematics Overview</p>
+          <img
+            alt="Mathematics Overview project"
+            src="assets/Mathematics-Overview.png"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://tribute-page-moralist208.vercel.app/"
+          class="project-tile"
+          aria-label="Tribute Page project"
+        >
+          <p class="project-title">Tribute Page</p>
+          <img
+            alt="Tribute Page project"
+            src="assets/Tribute-Page.png"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://random-quote-lovat.vercel.app/"
+          class="project-tile"
+          aria-label="Random Quote Generator project"
+        >
+          <p class="project-title">Random Quote Generator</p>
+          <img
+            alt="Random Quote Generator project"
+            src="assets/random-quote-generator.png"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://the-threader.vercel.app/"
+          class="project-tile"
+          aria-label="The Threader project"
+        >
+          <p class="project-title">The Threader</p>
+          <img
+            alt="The Threader project"
+            src="assets/Threader.png"
+            loading="lazy"
+          />
+        </a>
+      </section>
+    </main>
+    <footer id="Personal-Links" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Let's join forces...</h2>
+      <p>I have several headquarters</p>
+      <div id="headquarters">
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://www.facebook.com/profile.php?id=100006504001126"
+          class="headquarter"
+          aria-label="Facebook profile"
+        >
+          <i data-feather="facebook"></i>
+          <span>Facebook</span>
+        </a>
+        <a
+          id="profile-link"
+          rel="noopener"
+          target="_blank"
+          href="https://github.com/Invalid-Username404"
+          class="headquarter"
+          aria-label="GitHub profile"
+        >
+          <i data-feather="github"></i>
+          <span>Github</span>
+        </a>
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://www.linkedin.com/in/mohamed-ibrahim-ab6640299/"
+          class="headquarter"
+          aria-label="LinkedIn profile"
+        >
+          <i data-feather="linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://codepen.io/epburnbi-the-encoder"
+          class="headquarter"
+          aria-label="CodePen profile"
+        >
+          <i data-feather="codepen"></i>
+          <span>Codepen</span>
+        </a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script src="script.js"></script>
+    <!-- Link to the consolidated script -->
+  </body>
+</html>

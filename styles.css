@@ -1,0 +1,365 @@
+:root {
+  /* Define color variables for consistent theming */
+  --primary-color: #193d3d; /* Main background color */
+  --secondary-color: #155e75; /* Navbar background color */
+  --text-color: #f3f4f6; /* Default text color */
+  --highlight-color: #ea580c; /* Highlight color for emphasis */
+  --link-color: #3b82f6; /* Color for links */
+}
+
+[data-theme="dark"] {
+  /* Dark theme colors */
+  --primary-color: #0a1a1a; /* Darker background */
+  --secondary-color: #0c3c4c; /* Darker navbar background */
+  --text-color: #e0e0e0; /* Lighter text for contrast */
+  --highlight-color: #ff8c00; /* Slightly brighter highlight color */
+  --link-color: #4da6ff; /* Brighter link color */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+#navbar {
+  /* Style for the fixed navigation bar */
+  position: fixed;
+  margin-block-end: 4vh;
+  width: 100%;
+  height: 6vh;
+  inset-block-start: 0;
+  background-color: var(--secondary-color);
+  padding: 2vh 1vw;
+  z-index: 1;
+  transform: translateY(-100%); /* Start off-screen */
+  animation: slideDown 0.5s ease forwards; /* Apply animation */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#navbar div {
+  /* Flexbox for navbar items */
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+
+a {
+  /* Style for links */
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-color);
+}
+
+h1 {
+  /* Style for main heading */
+  margin-block-start: 15vh;
+  margin-block-end: 0;
+  text-align: center;
+}
+
+#welcome-section p {
+  /* Style for paragraph in welcome section */
+  margin-block: 2vh;
+  width: 95%;
+  text-align: center;
+  position: relative;
+  color: var(--highlight-color);
+  margin-inline: auto;
+  font-size: 1.2rem;
+}
+
+#laptop {
+  /* Style for laptop illustration */
+  z-index: -1;
+  height: 65%;
+  width: 60%;
+  margin-block: 10vh;
+  position: relative;
+  inset-inline-start: 30%;
+  animation: bounceRotate 2s ease-in-out infinite; /* Apply new animation */
+  will-change: transform; /* Inform the browser about the transform change */
+}
+
+@keyframes bounceRotate {
+  /* Keyframes for laptop animation */
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg); /* Original position */
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg); /* Bounce up and rotate slightly */
+  }
+  50% {
+    transform: translateY(0) rotate(-2deg); /* Return to original position with slight rotation */
+  }
+  75% {
+    transform: translateY(-5px) rotate(1deg); /* Slight bounce down */
+  }
+}
+
+#laptop * {
+  /* Position all child elements of laptop absolutely */
+  position: absolute;
+}
+
+#screen {
+  /* Style for laptop screen */
+  height: 100px; /* Height of the screen */
+  width: 200px; /* Width of the screen */
+  background-color: #1f2937; /* Screen background color */
+  inset-block-start: 10px; /* Position from the top */
+  inset-inline-start: 80px; /* Position from the left */
+  border-radius: 3px; /* Rounded corners */
+}
+
+#screen-neck {
+  /* Style for the neck of the laptop */
+  display: flex; /* Flexbox for alignment */
+  height: 35px; /* Height of the neck */
+  width: 50px; /* Width of the neck */
+  inset-inline-start: 37%; /* Center horizontally */
+  inset-block-end: -35%; /* Position from the bottom */
+  z-index: 2; /* Above the screen */
+  background-color: black; /* Neck color */
+}
+
+.negative-border {
+  /* Style for the negative border effect */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: var(--primary-color); /* Background color */
+  clip-path: ellipse(40% 100% at 00% 50%); /* Create an elliptical shape */
+}
+
+.neck-base {
+  /* Style for the base of the neck */
+  inset-block-end: -40%; /* Position from the bottom */
+  height: 50%; /* Height of the base */
+  width: 130%; /* Width of the base */
+  z-index: 1; /* Below the neck */
+  border-radius: 100%; /* Fully rounded */
+  background-color: black; /* Base color */
+}
+
+#keyboard {
+  /* Style for the laptop keyboard */
+  width: 120px; /* Width of the keyboard */
+  height: 50px; /* Height of the keyboard */
+  inset-inline-start: 80px; /* Position from the left */
+  inset-block-start: 170px; /* Position from the top */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #0f172a; /* Keyboard color */
+  display: grid; /* Grid layout for keys */
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 2px; /* Space between keys */
+}
+
+#mouse {
+  /* Style for the laptop mouse */
+  width: 20px; /* Width of the mouse */
+  height: 35px; /* Height of the mouse */
+  inset-inline-start: 240px; /* Position from the left */
+  inset-block-start: 170px; /* Position from the top */
+  border-radius: 50%; /* Fully rounded */
+  background-color: #1e1b4b; /* Mouse color */
+}
+
+#projects {
+  /* Style for the projects section */
+  margin-block-start: 100vh;
+  text-align: center;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  display: grid;
+  padding: 5px;
+  width: 98%;
+  border-radius: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  background-color: #64748b;
+}
+
+#projects h2 {
+  /* Style for the projects heading */
+  grid-column: 1/-1;
+}
+
+#projects > * {
+  /* Center text for all project items */
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  /* Responsive styles for smaller screens */
+  #projects > * {
+    grid-column: 1/-1; /* Stack items vertically */
+  }
+  #laptop {
+    width: 80%; /* Adjust width for better responsiveness */
+    inset-inline-start: 10%; /* Center on smaller screens */
+  }
+}
+
+.project-tile {
+  /* Style for individual project tiles */
+  background-color: #0f172a;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  will-change: transform, opacity; /* Prepare for transform and opacity changes */
+  animation-delay: 0.5s; /* Delay all animations */
+}
+
+.project-tile img {
+  /* Style for images in project tiles */
+  width: 100%;
+  border-radius: 5px;
+  margin-block-end: 0;
+}
+
+.project-tile:hover {
+  /* Animation effect on hover */
+  transform: scale(1.05); /* Scale up on hover */
+  opacity: 0.9; /* Slightly fade */
+}
+
+.project-tile:nth-child(odd) {
+  animation-delay: 0.1s; /* Delay for odd tiles */
+}
+.project-tile:nth-child(even) {
+  animation-delay: 0.2s; /* Delay for even tiles */
+}
+
+footer {
+  /* Style for the footer */
+  margin-block-start: 15vh;
+  text-align: center;
+}
+
+footer h2 {
+  /* Style for footer heading */
+  font-size: 3rem;
+}
+
+footer p {
+  /* Style for footer paragraph */
+  font-size: 1.3rem;
+  margin-block-start: -15px;
+  color: var(--highlight-color);
+  font-style: italic;
+}
+
+#headquarters {
+  /* Style for the headquarters section */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-block-start: 10vh;
+  margin-block-end: 8vh;
+  font-size: 20px;
+}
+
+.headquarter {
+  /* Style for individual headquarters links */
+  display: flex;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.headquarter:hover {
+  /* Animation effect on hover */
+  will-change: transform; /* Prepare for transform changes */
+  animation: icons 1s linear infinite; /* Apply icon animation */
+}
+
+@keyframes icons {
+  /* Keyframes for icon animation */
+  0%,
+  100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes tiles {
+  /* Keyframes for project tile animation */
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slideDown {
+  /* Keyframes for navbar slide-down animation */
+  from {
+    transform: translateY(-100%); /* Start off-screen */
+  }
+  to {
+    transform: translateY(0); /* Slide down to normal position */
+  }
+}
+/* Navbar styles */
+#navbar div a {
+  position: relative; /* Position for pseudo-element */
+  overflow: hidden; /* Hide overflow for the effect */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+#navbar div a::after {
+  content: ""; /* Create a pseudo-element */
+  position: absolute; /* Position it absolutely */
+  left: 50%; /* Center it horizontally */
+  bottom: 0; /* Position at the bottom */
+  width: 100%; /* Full width */
+  height: 2px; /* Height of the underline */
+  background-color: var(--link-color); /* Color of the underline */
+  transform: translateX(-50%) scaleX(0); /* Start hidden */
+  transition: transform 0.3s ease; /* Smooth transition for the underline */
+}
+
+#navbar div a:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+#navbar div a:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Show underline on hover */
+}
+
+#theme-toggle {
+  margin-left: auto; /* Push the button to the right */
+  margin-right: 15px; /* Add margin to the right */
+  background-color: transparent; /* Transparent background */
+  color: var(--text-color); /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for better click area */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+#theme-toggle:hover {
+  background-color: var(--link-color);
+}
